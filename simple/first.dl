@@ -1,0 +1,8 @@
+#lang datalog
+
+p(b, c). p(c, d). p(d, a).
+p(X, Y) :- p(X, Z), p(Z, Y).
+p(X, Y) :- p(Y, X).
+
+p(X, Y)?
+
